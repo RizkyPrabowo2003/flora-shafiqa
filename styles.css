@@ -1,0 +1,88 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #e91e63;
+}
+
+.image-container {
+    margin-top: 20px;
+}
+
+.photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #e91e63;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #e91e63;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #d81b60;
+}
+
+#confess {
+    margin-top: 20px;
+    font-size: 1.4em;
+}
+
+.confess-text {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: var(--delay);
+}
+
+.hidden {
+    display: none;
+}
+
+.hearts {
+    margin-top: 20px;
+}
+
+.heart {
+    font-size: 2em;
+    animation: float 2s infinite;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
